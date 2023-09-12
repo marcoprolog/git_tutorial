@@ -12,6 +12,7 @@ public class BTAgent : TreeHandler {
     [SerializeField] private Transform point2;
 
     int healthPoints = 10;
+    float damagePerSecond = 20.4f;
 
     void Update() {
         Execute();
