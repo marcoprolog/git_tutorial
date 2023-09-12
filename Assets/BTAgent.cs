@@ -11,6 +11,8 @@ public class BTAgent : TreeHandler {
     [SerializeField] private Transform point1;
     [SerializeField] private Transform point2;
 
+    int healthPoints = 10;
+
     void Update() {
         Execute();
     }
