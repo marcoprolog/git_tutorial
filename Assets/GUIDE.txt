@@ -1,0 +1,40 @@
+A quick guide to use this library.
+
+Making a tree: Go into the Window dropdown and open the Tree Maker (default 4 items down from the top).
+A new window will open, in which you can build a behavior tree using nodes and connections. 
+IMPORTANT: If you make changes in a script (doesn't matter if it is from the library or not) and the 
+editor compiles while the Tree Maker window is open, you will likely get a GUI error. Just close the Tree
+Maker window and open it again.
+
+Applying the tree: When a tree has been saved, it's saved as a ScriptableObject (asset file). It will 
+be located in the Trees folder. Please don't move this folder, as the code tries to locate it at
+Assets/Trees and it will make the folder again! Make a new script for your agent and change the new 
+scripts extension from MonoBehavior to TreeHandler.
+
+Adding methods to leafs: In Unity, add the new script to something and you'll be able to add the Tree 
+asset to the behavior, after which the list LeafMethods will be updated and allow for methods to be
+added to the different leaves using Unity Events; these allows you to drag a script reference onto it
+(the same script perhaps?) and find the method you want to execute. When writing methods to run, it's 
+important the methods have this structure:
+    public void <METHOD_NAME>(Node node) {
+		<YOUR_CODE>
+		node.SetActionResult(<bool?>);
+    }
+This structure ensures the method is bindable in the inspector (by being public), and allows for the
+leaf action to return its state after running. The nullable-bool is used to indicate the status of the
+leaf execution, which indicates the following to the tree handler:
+	true: leaf executed and action succeeded			(returns true to parent)
+	false: leaf executed but action failed				(returns false to parent)
+	null: leaf executed but didn't finish the action	(doesn't return to parent)
+If you want an action to take place over multiple frames, return null till a requirement is met.
+
+Executing the tree: When all is set and ready, you can execute the tree by calling Execute from the
+script. This method is declared in TreeHandler, and by extending TreeHandler, it can be called from
+anywhere in the script.
+
+There is a SampleScene with my own agent in it. Check the agents tree in the Tree Maker 
+and check the simple way of implementing TreeHandler in the AgentExample script.
+
+Have fun!
+
+-Tobias

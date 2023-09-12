@@ -1,0 +1,170 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f7b17d621ed6944c90069f90018bc54, type: 3}
+  m_Name: Mario
+  m_EditorClassIdentifier: 
+  nodes:
+  - pos: {x: 476, y: 49}
+    name: Root
+    parent:
+      rid: -2
+    children:
+    - rid: 7535827575239606281
+    - rid: 7535827575239606282
+    - rid: 7535827575239606283
+    nodeType: 2
+    isRoot: 1
+    childConnectionPoint: {x: 581, y: 129, z: 0}
+    parentConnectionPoint: {x: 581, y: 49, z: 0}
+  - pos: {x: 472, y: 218}
+    name: Node 1
+    parent:
+      rid: 7535827575239606284
+    children: []
+    nodeType: 1
+    isRoot: 0
+    childConnectionPoint: {x: 577, y: 298, z: 0}
+    parentConnectionPoint: {x: 577, y: 218, z: 0}
+  - pos: {x: 361, y: 226.99998}
+    name: Find coin
+    parent:
+      rid: 7535827575239606285
+    children: []
+    nodeType: 1
+    isRoot: 0
+    childConnectionPoint: {x: 466, y: 307, z: 0}
+    parentConnectionPoint: {x: 466, y: 226.99998, z: 0}
+  - pos: {x: 631, y: 229}
+    name: Node 2
+    parent:
+      rid: 7535827575239606285
+    children: []
+    nodeType: 1
+    isRoot: 0
+    childConnectionPoint: {x: 736, y: 309, z: 0}
+    parentConnectionPoint: {x: 736, y: 229, z: 0}
+  nodeConnections:
+  - childUINode:
+      pos: {x: 361, y: 226.99998}
+      name: Find coin
+      parent:
+        rid: 7535827575239606285
+      children: []
+      nodeType: 1
+      isRoot: 0
+      childConnectionPoint: {x: 466, y: 307, z: 0}
+      parentConnectionPoint: {x: 466, y: 226.99998, z: 0}
+    parentUINode:
+      pos: {x: 476, y: 49}
+      name: Root
+      parent:
+        rid: -2
+      children:
+      - rid: 7535827575239606281
+      - rid: 7535827575239606282
+      - rid: 7535827575239606283
+      nodeType: 2
+      isRoot: 1
+      childConnectionPoint: {x: 581, y: 129, z: 0}
+      parentConnectionPoint: {x: 581, y: 49, z: 0}
+  - childUINode:
+      pos: {x: 631, y: 229}
+      name: Node 2
+      parent:
+        rid: 7535827575239606285
+      children: []
+      nodeType: 1
+      isRoot: 0
+      childConnectionPoint: {x: 736, y: 309, z: 0}
+      parentConnectionPoint: {x: 736, y: 229, z: 0}
+    parentUINode:
+      pos: {x: 476, y: 49}
+      name: Root
+      parent:
+        rid: -2
+      children:
+      - rid: 7535827575239606281
+      - rid: 7535827575239606282
+      - rid: 7535827575239606283
+      nodeType: 2
+      isRoot: 1
+      childConnectionPoint: {x: 581, y: 129, z: 0}
+      parentConnectionPoint: {x: 581, y: 49, z: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 7535827575239606281
+      type: {class: UINode, ns: , asm: Assembly-CSharp}
+      data:
+        pos: {x: 472, y: 218}
+        name: Node 1
+        parent:
+          rid: 7535827575239606284
+        children: []
+        nodeType: 1
+        isRoot: 0
+        childConnectionPoint: {x: 577, y: 298, z: 0}
+        parentConnectionPoint: {x: 577, y: 218, z: 0}
+    - rid: 7535827575239606282
+      type: {class: UINode, ns: , asm: Assembly-CSharp}
+      data:
+        pos: {x: 361, y: 226.99998}
+        name: Find coin
+        parent:
+          rid: 7535827575239606285
+        children: []
+        nodeType: 1
+        isRoot: 0
+        childConnectionPoint: {x: 466, y: 307, z: 0}
+        parentConnectionPoint: {x: 466, y: 226.99998, z: 0}
+    - rid: 7535827575239606283
+      type: {class: UINode, ns: , asm: Assembly-CSharp}
+      data:
+        pos: {x: 631, y: 229}
+        name: Node 2
+        parent:
+          rid: 7535827575239606285
+        children: []
+        nodeType: 1
+        isRoot: 0
+        childConnectionPoint: {x: 736, y: 309, z: 0}
+        parentConnectionPoint: {x: 736, y: 229, z: 0}
+    - rid: 7535827575239606284
+      type: {class: UINode, ns: , asm: Assembly-CSharp}
+      data:
+        pos: {x: 474, y: 50}
+        name: Root
+        parent:
+          rid: -2
+        children:
+        - rid: 7535827575239606281
+        nodeType: 2
+        isRoot: 1
+        childConnectionPoint: {x: 579, y: 130, z: 0}
+        parentConnectionPoint: {x: 579, y: 50, z: 0}
+    - rid: 7535827575239606285
+      type: {class: UINode, ns: , asm: Assembly-CSharp}
+      data:
+        pos: {x: 476, y: 49}
+        name: Root
+        parent:
+          rid: -2
+        children:
+        - rid: 7535827575239606281
+        - rid: 7535827575239606282
+        - rid: 7535827575239606283
+        nodeType: 2
+        isRoot: 1
+        childConnectionPoint: {x: 581, y: 129, z: 0}
+        parentConnectionPoint: {x: 581, y: 49, z: 0}
